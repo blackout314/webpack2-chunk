@@ -11,6 +11,7 @@ let plugins = [
     minChunks: 2
   }),
   //new UglifyJSPlugin(),
+  new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
   new webpack.ProvidePlugin({
     $: path.join(__dirname, "node_modules", "jquery/dist/jquery"),
     jQuery: path.join(__dirname, "node_modules", "jquery/dist/jquery")
